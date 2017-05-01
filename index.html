@@ -1,23 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="template.css">
+	<link rel="stylesheet" type="text/css" href="css/style_min.css">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta charset="UTF-8">
+	<title>Portfolio_Site</title>
 </head>
 
 <body>
-<div class="vl"></div>
-<div class="menu">
-	<ul>
-		<li><a href="#">blog</a> </li>
-		<li><a href="#">portfolio</a></li>
-		<li><a href="#">contact</a></li>
-	</ul>
-</div>
+	<div class="logo">
+		<a href="http://katriniya.com" class="logo__link">
+			<img src="img/katriniya_title.png" class="logo__link__img" alt="kat_logo">			
+		</a>
+	</div>
+	<div class="menu">
+		<a href="index.html" class="menu__link menu__link_active">Site</a>
+		<a href="graphic.html" class="menu__link">Graphics</a>
+		<a href="other.html" class="menu__link">Other</a>
+	</div>
+	<div class="filter">
+        <a rel="content__object" class="current filter__cat">All</a>
+		<a rel="jquery" class="filter__cat">Jquery</a>
+		<a rel="bootstrap" class="filter__cat">Bootstrap</a>
+		<a rel="python" class="filter__cat">Python</a>
+	</div>
 
-<div class="content"></div>
-
-<footer></footer>
-
+	<div class="content">
+		<div class="content__object jquery">
+			<a href="http://katriniya.com" class="content__object__link">
+				<img src="img/site/katriniya.png" alt="katrin_site" class="content__object__link__img">
+				<div  class="content__object__link__add_text">
+					<p class="content__object__link__add_text__p">Портфолио<br>Технологии: HTML, CSS, Jquery</p>	
+				</div>
+			</a>
+		</div>
+		<div class="content__object">
+			<a href="http://byters.org/" class="content__object__link">
+				<img src="img/site/byters.png" class="content__object__link__img" alt="byters">
+				<div  class="content__object__link__add_text">
+					<p class="content__object__link__add_text__p">Портфолио Android разработчика.<br>Технологии: HTML, CSS</p>			
+				</div>
+			</a>
+		</div>
+		<div class="content__object bootstrap">
+			<a href="#" class="content__object__link">
+				<img src="img/site/test_site.png" alt="katrin_test_site_01" class="content__object__link__img">
+				<div  class="content__object__link__add_text">
+					<p class="content__object__link__add_text__p">Пример работ<br>Технологии: HTML, CSS, Bootstrap</p>			
+				</div>
+			</a>
+		</div>
+		<div class="content__object">
+			<a href="img/site/green_site.png" class="content__object__link">
+				<img src="img/site/green_site_min.jpg" alt="katrin_test_site_01" class="content__object__link__img">
+				<div  class="content__object__link__add_text">
+					<p class="content__object__link__add_text__p">Пример работ<br>Технологии: HTML, CSS</p>			
+				</div>
+			</a>
+		</div>
+		<div class="content__object jquery">
+			<a href="http://milkprom.azurewebsites.net/" class="content__object__link">
+				<img src="img/site/milk_prom_min.jpg" alt="milk-prom" class="content__object__link__img">
+				<div  class="content__object__link__add_text">
+					<p class="content__object__link__add_text__p">Сайта компании "Милк-пром"<br>Технологии: HTML, CSS, Jquery, Yandex карты</p>			
+				</div>
+			</a>
+		</div>
+		<div class="content__object python">
+			<a href="https://github.com/katriniya/list_gog_games/tree/python3" class="content__object__link">
+				<img src="img/site/python_gog.png" alt="python_gog" class="content__object__link__img">
+				<div  class="content__object__link__add_text">
+					<p class="content__object__link__add_text__p">Парсер сайта GOG.com, сортирующий игры по цене<br>Технологии: Python</p>			
+				</div>
+			</a>
+		</div>
+		<div class="content__object">
+			<a href="http://kazus.azurewebsites.net/" class="content__object__link">
+				<img src="img/site/kazus.png" alt="kazus" class="content__object__link__img">
+				<div  class="content__object__link__add_text">
+					<p class="content__object__link__add_text__p">Сайт молодежного театра "KaZuS"<br>Технологии: HTML, CSS</p>			
+				</div>
+			</a>
+		</div>
+		<div class="content__object jquery">
+			<a href="http://avire.azurewebsites.net/" class="content__object__link">
+				<img src="img/site/avire.jpg" alt="avire" class="content__object__link__img">
+				<div  class="content__object__link__add_text">
+					<p class="content__object__link__add_text__p">Пример работ<br>Технологии: HTML, CSS, Jquery, Yandex карты</p>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer__contact">
+			<p><img src="img/email.png" width="20" alt="email">   katriniya.a@gmail.com</p>
+			<a href="https://telegram.me/katriniya">  <img src="img/telegram-logo.png" width="20" alt="telgram">   +7 965 2408871</a>
+		</div>			
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

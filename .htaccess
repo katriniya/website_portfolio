@@ -1,0 +1,15 @@
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    ExpiresByType image/jpeg "access plus 1 months"
+    ExpiresByType image/png "access plus 1 months"
+    ExpiresByType image/ico "access plus 1 months"
+    ExpiresByType style/css "access plus 1 months"
+    ExpiresByType script/js "access plus 1 months"
+    
+    RewriteEngine On
+	RewriteCond %{REQUEST_URI} ! \.html$
+	RewriteCond %{REQUEST_URI} ! /$
+	RewriteRule ^(.*)$ $1.html
+</IfModule>
