@@ -1,0 +1,105 @@
+doctype html
+html
+ head
+  title test project
+  link(href='css/style.css'  rel="stylesheet" type="text/css" )
+  link(href='css/jquery.circliful.css'  rel="stylesheet" type="text/css" )
+  script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js")
+  script(src="js/jquery.min.js")
+  meta(charset="utf-8")
+ body
+  header
+   div.header__text
+    h1 <span>TEST</span> PROJECT
+    a(href="test_site.zip" download).header__text__button DOWNLOAD
+   div.header__social
+    a(href='https://www.facebook.com/')
+     img( src='img/fb_white.png')
+    a(href='https://twitter.com/')
+     img( src='img/tw_white.png')
+    a(href="https://plus.google.com/?hl=ru")
+     img(src='img/g_white.png')
+  div.content
+   div.content__about
+    h2 about us
+    p.
+     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+   div.content__history
+    div.content__history__img
+     img(src='img/history.png')
+    div.content__history__text
+     h2 our history
+     p.
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+      <br><br>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+      Lorem ipsum dolor sit amet.
+   div.content__skills
+    h2 our skills
+    p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    div.content__skills__statis
+     div.box#circle-1.circle(data-dimension="100" data-text="HTML" data-info="Sweet" data-width="30" data-fontsize="30" data-percent="85" data-fgcolor="#red" data-bgcolor="#dadada" data-fill="#ddd" data-total="100" data-part="85")
+     div.box#circle-2.circle(data-dimension="100" data-text="CSS" data-info="Sweet" data-width="30" data-fontsize="30" data-percent="80" data-fgcolor="#red" data-bgcolor="#dadada" data-fill="#ddd" data-total="100" data-part="80")
+     div.box#circle-3.circle(data-dimension="100" data-text="WORDPRESS" data-info="Sweet" data-width="30" data-fontsize="30" data-percent="30" data-fgcolor="#red" data-bgcolor="#dadada" data-fill="#ddd" data-total="100" data-part="30")
+     div.box#circle-4.circle(data-dimension="20" data-text="SEO" data-info="Sweet" data-width="30" data-fontsize="30" data-percent="35" data-fgcolor="#red" data-bgcolor="#dadada" data-fill="#ddd" data-total="100" data-part="35")     
+
+   div.content__team
+    h2 OUR team
+    p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    div.content__team__user
+    - var x = 3;
+    - var job = ["CEO", "MARKETING HEAD", "PROJECT HEAD"];
+    - for (var i=1; i<=x; i++) {
+       div.content__team__user__people
+        img(src='img/user'+i+'.png')
+        div.content__team__user__people__text
+         div.content__team__user__people__text__name
+          h3='User #'+i
+          h3= job[i-1]
+         div.content__team__user__people__text__contact
+          a(href='https://www.facebook.com/')
+           img( src='img/fb_red.png')
+          a(href='https://twitter.com/')
+           img( src='img/tw_red.png')
+    - }
+   div.content__contact
+    h2 contact us
+    p.
+     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    div.content__contact__more
+     div.content__contact__more__details
+      h3 contact details
+      p
+       img(src='img/loc.png')
+       | State/House/Zip
+      p
+       img(src='img/phone.png')
+       | 111-111-111
+      p
+       img(src='img/mail.png')
+       | email@1.com
+      p.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+     div.content__contact__more__mess
+      h3 send us a message
+      form
+       input(type='text' placeholder='NAME')
+       input(type='email' placeholder='EMAIL')
+       textarea(placeholder='SUBJECT')
+       input(type='submit' value='SEND')
+
+   footer
+    a(href='https://www.facebook.com/')
+     img( src='img/fb_red.png')
+    a(href='https://twitter.com/')
+     img( src='img/tw_red.png')
+    a(href="https://plus.google.com/?hl=ru")
+     img(src='img/g_red.png')
+
+  script.
+   $(document).ready(function() {
+    $('#circle-1').circliful();
+    $('#circle-2').circliful();
+    $('#circle-3').circliful();
+    $('#circle-4').circliful();
+   });

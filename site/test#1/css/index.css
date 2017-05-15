@@ -1,0 +1,312 @@
+.padding,
+.portfolio_photo,
+.padding_portfolio{
+  width: 80%;
+  margin: 0 10%;
+}
+.header,
+.services,
+.about{
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.text,
+.slider,
+.portfolio,
+.contact{
+  width: 100%;
+  background-color: #2e3e4f;
+  color: #a3afb2;
+  font-size: 1em;
+}
+.header{
+  background-color: #fff;
+}
+.padding_header{
+  width: 80% !important;
+  margin: 0 10%;
+}
+.padding_header div{
+  padding: 0;
+}
+.logo{
+  width: 10%;
+  margin-left: 0 !important;
+  text-align: left;
+}
+.header input {
+  width: 50%;
+}
+.nav{
+  width: auto !important;
+}
+.navbar-inner li a{
+  color: #515862 !important; 
+  font-size: 1em;
+  padding-top: 12px !important;
+  border-bottom: 5px solid #fff;
+}
+.nav li a:hover{
+  background-color: #12a3d6 !important;
+  color: #c5f4ff !important;
+  font-weight: 500;
+  border-bottom: 5px solid #0080b7;
+}
+
+.orange_button{
+  background-color: #f98561;
+  padding:7px 20px;
+  color: #fff;
+  font-size:14px;
+  font-weight: 200;
+  border:none;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+.search_button{
+  width: auto !important;
+}
+.search_button input[type="text"]{
+  border-radius: 20px !important;
+  float: right;
+}
+.search_button input[type="image"]{
+  width: auto;
+
+  float: right;
+}
+.services,
+.portfolio,
+.offer,
+.about,
+.contact {
+  padding: 2% 0 3%;
+}
+.services .span3{
+  width: 17%;
+  min-width: 105px;
+  margin-right:9.7%; 
+  margin-left: 0 !important;
+}
+.services .span3:last-child{
+  margin-right: 0;
+}
+.span3>p{
+  font-size: 11px;
+  min-width: 105px;
+  width: 55%;
+  display: inline-block;
+}
+.slider{
+  height: 490px;
+  overflow: hidden;
+  background-image: url(../img/Photo_lean.png); 
+}
+.button{
+  position: relative;
+  width: 160px;
+  min-width: 142px;
+  height: auto;
+  background-color: #2190c1;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  display: inline;
+  padding: 10px;
+  margin: 0 45%;
+  font-size:1.5em;
+  white-space: nowrap;
+}
+
+.span10 {
+  max-width: 70%;
+  text-align: left;
+}
+.span3>a>button,
+.span2 button{
+  float: right;
+  width: auto;
+  height: auto;
+  background-color: #2190c1;
+  border:none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  display: inline;
+}
+.portfolio .span2{
+  width: 22% !important;
+  min-width: 150px;
+  padding: 0;
+}
+.portfolio .span2>button{
+  margin-top: 10px;
+  padding:10px;
+}
+.nav-header button{
+  background-color: #fff !important;
+  border-radius: none;
+}
+.sl_text {
+  width: 50%;
+  margin: 5% 25% 0;
+  text-align: center;
+}
+.portfolio_photo{
+  margin-left: 0;
+}
+.portfolio_photo .photo img{
+  float: left;
+  margin-bottom: 10px;
+}
+.photo{
+  width: 22.265625%;
+  max-width: 400px;
+  margin-top:3%;
+  margin-right: 5%;
+  display: inline-block;
+}
+.portfolio_photo .photo:first-child {
+  margin-left: 0;
+}
+.portfolio_photo .photo:last-child {
+  margin-right: 0;
+}
+.photo>h4, .photo span, .contact h3, .contact p, .contact a{
+  text-align: left;
+  margin-left: 0;
+}
+.photo span{
+    display: inline-block;
+    font-size: 11px;
+}
+.portfolio h2, .portfolio h4, .contact h3{
+  color: #f98561;
+  font-weight: 200;
+}
+@media (min-width: 768px) and (max-width: 979px){
+    .portfolio .span4, .about .span3{
+      text-align: center;
+      font-size: 11px;
+      min-width: 105px;
+      width: 55%;
+  }
+    .services .span3{
+      width: 20% !important;
+      margin: 0 15% !important;
+    }
+    .contact .span3{
+      width: 60%;
+      text-align: center;
+      font-size: 11px;
+      min-width: 200px;
+    }
+  .portfolio .span4, .about .span3, .contact .span3{
+    display: inline-block;
+  }
+}
+@media (max-width: 767px){
+    .portfolio .span4, .about .span3{
+      text-align: center;
+      font-size: 11px;
+      min-width: 105px;
+      width: 55%;
+  }    
+    .services .span3{
+      width: 50% !important;
+      margin: 0 40% !important;
+    }
+  .contact .span3{
+      width: 60%;
+      text-align: center;
+      font-size: 11px;
+      min-width: 250px;
+    }
+  .portfolio .span4, .about .span3, .contact .span3{
+    display: inline-block;
+  }
+}
+
+.about{
+  text-align: center;
+}
+.about .offer p{
+  width: 76.54723127%;
+  font-size: 12px;
+  display: inline-block;
+}
+.about .span3{
+  width: 15%;
+  margin: 0 5%;
+}
+.about h4, .about h1{
+  color: #2190c1;
+}
+.about h4, .about span{
+  text-align: justify;
+  margin-left: 0;
+}
+.span4>span>a>span{
+  font-size: 14px;
+  font-weight: 600;
+}
+.about span{
+  display: inline-block;
+  font-size: 11px;
+}
+.span3>a>button{
+  margin-top: 5%;
+  padding:5px 15px;
+}
+hr{
+  width: 70%;
+  border: 0.1em solid #556270;
+}
+.twitter p{
+  color: #556270
+}
+.contact a{
+  text-decoration: none;
+}
+.contact .span3{
+  width: 20%;
+  margin: 0 3.3%;
+}
+
+.contact .span3:first-child{
+  margin-left: 0;
+}
+.contact .span3:last-child{
+  margin-right: 0;
+}
+.project{
+  margin: 2% 0;
+}
+.project img, .project_cont img{
+  float: left;
+  clear: right;
+  padding-right: 10px;
+}
+.project p, .project_cont img{
+  font-size: 12px;
+}
+.project_cont div{
+  padding-bottom: 5%;
+}
+.mobile{
+  min-height: 40px;
+  text-align: left;
+  margin: 20px 0; 
+}
+.mobile p, .mail p {
+  line-height: 1em;
+}
+.mail{
+  min-height: 40px;
+  text-align: left;
+  margin: 20px 0; 
+}
+.mail img{
+  padding-top: 7px;
+}

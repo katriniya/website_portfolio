@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Lato')
+
+$light-color: #9f9f9f
+$bgColor: #f7f7f7
+
+html, body
+	margin: 0
+	min-width: 800px
+	overflow-x: hidden
+	font-family: 'Lato', sans-serif
+
+.header__text, .content__history,.content__team, .content__contact__more
+	width: 80vw
+	margin-left: auto
+	margin-right: auto
+
+p
+	color: $light-color
+	font-size: 1em
+a
+	text-decoration: none 
+header 
+	background: url(../img/header.png) no-repeat center
+	background-size: cover
+	width: 100vw
+	margin-top: -25px
+	color: white
+	text-align: center
+	height: 80vh
+	h1
+		font-weight: 300
+		span
+			color: red
+.header__text__button
+	border: 2px solid white
+	padding: 10px 30px
+	color: white
+	font-size: 1.5em
+	background-color: transparent
+	
+h2, h3
+	color: black
+	text-transform: uppercase
+
+.header__text
+	position: relative
+	top: 30vh
+.header__social
+	position: absolute
+	top: 30px
+	right: 60px
+	a
+		margin-right: 10px
+.content__about 
+	height: 200px
+.content__about, .content__skills, .content__contact
+	width: 100%
+	background-color: #f7f7f7
+	text-align: center
+	h2
+		padding-top: 50px
+	h2, p
+		position: relative
+		margin-top: 0
+		margin-left: auto
+		margin-right: auto
+		width: 60vw
+.content__history
+	text-align: center
+	div
+		min-width: 475px
+		width: 40%
+		position: relative
+		display: inline-block
+.content__history__text
+	margin-left: 0
+	margin-top: 20px
+	margin-left: 10%
+	vertical-align: top
+	line-height: 2
+	text-align: justify
+.content__skills__statis
+	margin: 0 auto
+	div
+		width: 250px
+		display: inline-block
+.content__team
+	margin-top: 50px
+	margin-bottom: 30px
+	text-align: center
+	h2, p
+		position: relative
+		margin-top: 0
+		margin-left: auto
+		margin-right: auto
+		width: 60vw
+	div
+		display: inline-block
+
+.content__team__user__people
+	text-align: center
+	width: 20vw
+	min-width: 350px
+	margin-right: 30px
+	>img
+		width: 100%
+.content__team__user__people:last-child
+	margin-right: 0
+.content__team__user__people__text
+	text-align: left
+	width: 100%
+	h3:last-child
+		color: $light-color
+		font-weight: 300
+	div
+		display: inline-block
+.content__team__user__people__text__contact
+	vertical-align: top
+	margin-top: 20px
+	float: right
+	a
+		margin-right: 10px
+	a:last-child
+		margin-right: 0
+
+.content__contact__more
+	text-align: center
+	div
+		display: inline-block
+		width: 40%
+.content__contact__more__details
+	text-align: left
+	vertical-align: top
+	img
+		margin-right: 10px
+	p
+		width: 100%
+.content__contact__more__mess
+	text-align: left
+	input
+		width: 46%
+		height: 30px
+		border: 2px solid #ccc
+		background-color: white
+	input[type='email']
+		float: right
+	textarea
+		background-color: white
+		border: 2px solid #ccc
+		padding: 2% 2.5%
+		width: 94%
+		height: 100px
+		margin-top: 10px
+		resize: none
+	input[type='submit']
+		margin-top: 10px
+		margin-bottom: 30px
+		width: 200px
+		height: 50px
+		font-size: 20px
+		font-weight: bold
+		color: white
+		background-color: red
+		border: none
+footer
+	width: 65vw
+	margin-left: auto
+	margin-right: auto
+	margin-bottom: 10px
+	margin-top: 10px
+	text-align: right
+	a
+		margin-right: 10px

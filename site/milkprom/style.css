@@ -1,0 +1,143 @@
+body,
+html
+{
+    margin: 0;
+    padding: 0;
+
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+.header
+{
+    width: 100%;
+    height: 500px;
+
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.header__search,
+.header__logo,
+.content,
+.footer p
+{
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.header__logo
+{
+    padding-top: 50px;
+}
+.header__logo img
+{
+    width: 400px;
+}
+.header__search
+{
+    width: 55%;
+    min-width: 1000px;
+    margin-top: 250px;
+    padding: 15px 5px;
+
+    text-align: center;
+
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.5);
+}
+.header__search input[type='search'],
+.header__search__buttom
+{
+    font-size: 1em;
+
+    padding: 5px;
+
+    border: none;
+}
+.header__search input[type='search']
+{
+    width: 80%;
+    max-width: 790px;
+}
+.header__search__buttom
+{
+    width: 15%;
+    min-width: 200px;
+
+    color: white;
+    background-color: #ed974f;
+}
+.content__carousel
+{
+    margin-top: 30px;
+}
+.content__carousel__list__item__text
+{
+    text-align: center;
+}
+.content__carousel__list__item__link_img__img
+{
+    width: 300px;
+}
+.content__seller__our_order
+{
+    text-align: center;
+    font-size: 1.8em;
+}
+.content__seller__client__photo,
+.content__seller__client__comment
+{
+    display: inline-block;
+}
+.content__seller__client__photo
+{
+    width: 35%;
+
+
+    text-align: center;
+}
+.content__seller__client__comment
+{
+    width: 60%;
+    position: relative;
+}
+.content__seller__client__comment__text,
+.content__seller__client__comment__product
+{
+    display: inline-block;
+}
+.content__seller__client__comment__product, 
+.content__seller__client__photo__company{
+	font-size: 0.9em;
+}
+.content__seller__client__photo__company{
+	font-style: italic;
+}
+.content__seller__client__comment__text
+{
+    vertical-align: top;
+    font-size: 1.4em;
+}
+.content__seller__client__photo img
+{
+    width: 150px;
+    height: 150px;
+
+    border: 5px solid #ed974f;
+    border-radius: 50%;
+}
+.maps{
+    margin-top: 30px;
+	text-align: center;
+}
+.footer
+{
+    font-size: .8em;
+
+    height: 100px;
+    margin-bottom: 0;
+    padding-top: 25px;
+
+    color: white;
+    background-color: #ed974f;
+}
