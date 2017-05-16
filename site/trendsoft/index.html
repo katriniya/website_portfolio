@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script/handlebars-v4.0.5.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="script/date.js"></script>
+	<script type="text/javascript" src="script/underscore-min.js"></script>
+	<script type="text/javascript" src="script/controller.js"></script>
+</head>
+<body  onload='parse();'>
+	<header>
+		<div class="header">
+			<div class="header__logo">
+				<a href="http://www.trendsoft.ru/ru/"><img src="img/logo.png"></a>
+			</div>
+			<div class="header__project">
+				<div class="header__project__select">
+					<select>
+						<option value="Barselona Design">Barselona Design</option>
+						<option value="LA Design">LA Design</option>
+						<option value="Name Design">Name Design</option>
+					</select>
+				</div>
+			</div>
+			<div class="header__user">
+				<a href="#" class="header__user__pic"><img src="img/icon_user.png"></a>
+				<a href="#" class="header__user__name">Petr_Osmanov</a>
+				<a href="javascript:void(0);" tabindex="1" class="header__user__sub_menu"><img src="img/marker_user.png"></a>
+				<ul>
+					<a href="#"><li>Настройки</li></a>
+					<a href="#"><li>Выход</li></a>
+				</ul>
+			</div>
+			
+		</div>
+	</header>
+	<article>
+		<div class="article">
+			<div class="article__left">
+				<div class="article__left__top">
+					<a href="#">добавить задачу</a>
+				</div>
+				<div class="article__left__menu">
+					<ul>
+						<a href="#">
+							<li>сводная информация</li>
+						</a>
+						<a href="#">
+							<li class="article__left__menu__active">Все задачи
+								<ul class="article__left__menu__sub_list">
+									<li>Открытые</li>
+									<li>Выполненные</li>
+
+								</ul>
+							</li>
+						</a>
+						<a href="#">
+							<li>Отчеты</li>
+						</a>
+					</ul>
+				</div>
+			</div>
+			<div class="article__right">
+				<div class="article__right__top">
+					<img src="img/flash.png">
+					<div class="article__right__top__select">
+						<select>
+							<option value="Barselona Design">Barselona Design</option>
+							<option value="LA Design">LA Design</option>
+							<option value="Name Design">Name Design</option>
+						</select>
+					</div>
+
+				</div>
+				<div class="article__right__task">
+					<div class="article__right__task__head">
+						<div>
+							<p>Открытые задачи</p>
+
+							<p class="article__right__task__head__alltask_num">
+								<script id="nums" type="text/x-handlebars-template">
+									{{num_page}}
+								</script></p>
+							</div>
+							<div>
+								<a href="#"><img src="img/plus.png"> Добавить задачу</a>
+							</div>
+						</div>
+
+						<div class="article__right__task__search">
+							<div  class="search_date_task">
+								<select  class="search_date_task__select" id="select_date" onchange="updateData()">
+									<option value="-1" selected="selected">Выберите дату</option>
+									<script id="date" type="text/x-handlebars-template">			
+										{{#each this}}
+										<option value="{{@index}}">{{@key}}</option>
+										{{/each}}
+									</script>
+								</select>
+							</div>
+							<div class="search_open_task">
+							<select id="select_state" onchange="setData()">
+								<option value="-1" selected="selected">Выберите статус</option>
+								<option value="0">Открытые задачи</option>
+								<option value="1">Выполненные задачи</option>	
+								</select>
+							</div>
+							<div>
+								<form>
+									<input type="text" id="search"  onkeypress="return checkSearch(event)" placeholder="Поиск задач по проекту">
+									<input type="image" src="./img/search.png" disabled="">
+								</form>
+							</div>
+						</div>
+						<table id="table" cellspacing="0">
+							<thead>
+
+								<tr>
+									<th>T</th>
+									<th>Тикет</th>
+									<th>Название</th>
+									<th>П</th>
+									<th>Статус</th>
+									<th>Решение</th>
+									<th>Создано</th>
+									<th>Обновлено</th>
+									<th>Дедлайн</th>
+								</tr>		
+							</thead>
+							<tbody class="updates">
+								<script id="template" type="text/x-handlebars-template">
+									{{#each this}}
+									<tr>								
+										<th><img src='./img/{{t_img t}}.png'></th>
+										<th>{{number_ticket ticket}}</th>
+										<th>{{title}}</th>
+										<th><img src='./img/{{p_img p}}.png'></th>
+										<th>{{#if state}}Закрыто{{else}}Открыто{{/if}}</th>
+										<th>{{#if solution}}Решено{{else}}Не решено{{/if}}</th>
+										<th>{{date_form date_created}}</th>
+										<th>{{#if date_updated}}{{date_form date_updated}}{{/if}}{{#unless date_updated}}—{{/unless}}</th>
+										<th>{{date_form deadline}}</th>
+									</tr>								
+									{{/each}}
+								</script>
+							</tbody>
+						</table>
+						<div class="table_footer">
+							<div class="table_footer__page">
+							<script id="pages" type="text/x-handlebars-template">
+								{{{pages this}}}							
+							</script>
+							</div>
+							<div class="table_footer__num">
+								<p>Количество задач:</p>
+								<span id="task_20" onClick="num_page(this.id)" class="active">20</span>
+								<span id="task_50" onClick="num_page(this.id)" >50</span>
+								<span id="task_100" onClick="num_page(this.id)" >100</span>
+								<span id="task_all" onClick="num_page(this.id)" >все</span>
+							</div>
+
+						</div>
+					</div>
+					<div class="footer">
+						<div class="footer__top">
+							<div class="footer__top__left">
+								<div class="footer__title">Возникли вопросы?</div>
+								<p>Воспользуйтесь формой<br>отправки заявки и мы свяжемся<br>с вами</p>
+								<a class="footer__button" href="#">Оставить заявку</a>
+							</div>
+							<div class="footer__top__right">
+								<div class="footer__title">или свяжитесь с нами напрямую:</div>
+								<p>г. Москва ул. Викторенко д. 11<br>+7 (499) 502-81-39</p>
+								<a href="mailto:order@trendsoft.ru" class="footer__top__right__email">order@trendsoft.ru</a>        
+							</div>					
+						</div>
+						<div class="footer__bottom">
+							<p class="footer__bottom__copyrights footer__bottom__item">© ООО «Трендсофт», 2011-2015</p>
+							<p class="footer__bottom__phone footer__bottom__item">тел. <a href="tel:+74995028139">+7 (499) 502-81-39</a></p>
+							<div class="footer__bottom__socials">
+								<ul>
+									<li class="item_1"><a href="https://www.facebook.com/trndsft/"></a></li>
+									<li class="item_2"><a href="http://vk.com/trendsoft"></a></li>
+								</ul>
+							</div>
+						</div>				
+					</div>
+				</div>
+			</div>
+		</article>
+	</body>
+	</html>
